@@ -1,0 +1,212 @@
+
+/* PÁGINA PRINCIPAL */
+.pagina-agendamento {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+.agendamento-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.agendamento-header h1 {
+  font-size: 44px;
+  color: #ff9000;
+  margin: 0 0 8px;
+}
+
+.agendamento-header p {
+  font-size: 20px;
+  color: #ccc;
+  margin: 0;
+}
+
+/* CONTAINER DOS PAINÉIS */
+.agendamento-paineis {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 35px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* PAINÉIS */
+.painel-agendamento {
+  background: #141414;
+  border: 5px solid #e99a27;
+  border-radius: 35px;
+  padding: 25px;
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.painel-agendamento h2 {
+  color: #e99a27;
+  font-size: 21px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+/* CALENDÁRIO */
+.calendario-semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.calendario-semana span {
+  font-size: 12px;
+  color: #d58b25;
+  font-weight: bold;
+}
+
+.calendario-dias {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.dia-calendario {
+  background: #797570;
+  border: none;
+  color: white;
+  padding: 11px 0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dia-calendario:hover {
+  background: #ff9000;
+  color: black;
+}
+
+.calendario-info {
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+/* HORÁRIOS */
+.horarios-subtitulo {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 18px;
+}
+
+.grade-horarios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 16px;
+}
+
+.botao-horario {
+  background: transparent;
+  border: 2px solid #8d632e;
+  color: #ccc;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.botao-horario:hover {
+  background: #ff9000;
+  color: #111;
+  border-color: #ff9000;
+}
+
+/* RESUMO */
+.resumo-agendamento {
+  border-top: 2px solid #8d632e;
+  margin-top: 25px;
+  padding-top: 15px;
+}
+
+.resumo-agendamento h3 {
+  text-align: center;
+  color: #e99a27;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.resumo-agendamento p {
+  color: #aaa;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resumo-agendamento svg {
+  color: #ff9000;
+  flex-shrink: 0;
+}
+
+/* BOTÃO CONFIRMAR */
+.confirmar-agendamento {
+  margin-top: 30px;
+  padding: 18px 45px;
+  background: #ff9000;
+  border: none;
+  border-radius: 12px;
+  color: #111;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.2s;
+}
+
+.confirmar-agendamento:hover {
+  background: #ffad32;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .agendamento-paineis {
+    flex-direction: column;
+    max-width: 450px;
+  }
+
+  .agendamento-header h1 {
+    font-size: 32px;
+  }
+
+  .agendamento-header p {
+    font-size: 16px;
+  }
+
+  .painel-agendamento {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .confirmar-agendamento {
+    font-size: 17px;
+    padding: 15px 25px;
+  }
+}

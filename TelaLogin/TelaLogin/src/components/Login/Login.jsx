@@ -4,16 +4,20 @@ import "./Login.css";
 import logoBarbearia from '../../assets/LOGO.png';
 import tituloLogin from '../../assets/EFETUE SEU LOGIN.png';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
+
     const handleSubmit = (event) => {
-        event.preventDefault()
-        
-        alert("Enviando dados:" + username + " - " + password)
-    }
+        event.preventDefault();
+
+        alert("Enviando dados:" + username + " - " + password);
+
+        onLogin();
+    };
+
 
   return (
     <>
